@@ -32,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show the first image slide initially
     showImageSlide(imageSlideIndex);
-}
 
-);
+    // Hamburger Menu Functionality
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+});

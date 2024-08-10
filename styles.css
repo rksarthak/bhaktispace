@@ -1,5 +1,5 @@
-/* General Reset */
-* {
+ /* General Reset */
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,12 +21,13 @@ header {
     position: sticky;
     top: 0; /* Make sure it sticks to the top */
     z-index: 1000; /* Ensure it stays above other content */
+    justify-content: space-between;
 }
 
+/* Logo Styling */
 .logo {
     display: flex;
     align-items: center;
-    flex: 1; /* Take up remaining space */
 }
 
 .logo img {
@@ -41,8 +42,9 @@ header {
     color: #4A235A;
 }
 
+/* Navigation Styling */
 nav {
-    flex: 2; /* Take up more space for navigation */
+    display: flex;
 }
 
 .nav-links {
@@ -65,6 +67,59 @@ nav {
 
 .nav-links a:hover {
     color: #F5B041; /* Change color on hover */
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2000; /* Ensure it is above other elements */
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: black; /* Black color for visibility */
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links by default on small screens */
+        position: absolute;
+        top: 60px; /* Position it below the header */
+        right: 0;
+        background-color: #F5B041; /* Match header color */
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        z-index: 1000; /* Ensure it is above other content */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .nav-links li {
+        margin: 15px 0; /* Space between links */
+    }
+
+    .nav-links a {
+        font-size: 20px; /* Adjust font size for better readability */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu on small screens */
+    }
+}
+
+/* Optional: Add styles for active hamburger icon */
+.hamburger.active .bar {
+    background-color: #F5B041; /* Change color or add transformation if needed */
 }
 
 /* Welcome Section Styling */
@@ -173,4 +228,104 @@ nav {
 
 .active-dot, .dot:hover {
     background-color: #717171;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background-color: #F5B041; /* Soft gold to match header */
+    color: #4A235A; /* Deep spiritual purple */
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* About Section Styling */
+.about-section {
+    background-image: url('images/about_bg.jpg'); /* Replace with the path to your nature-related background image */
+    background-size: cover;
+    background-position: center;
+    color: #4A235A; /* Deep spiritual purple */
+    padding: 40px;
+    text-align: center;
+    min-height: 100vh; /* Full viewport height */
+}
+
+.about-content {
+    background-color: rgba(255, 255, 255, 0.5); /* White background with some transparency */
+    display: inline-block;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background-color: #F5B041; /* Soft gold to match header */
+    color: #4A235A; /* Deep spiritual purple */
+    padding: 40px;
+    text-align: center;
+    min-height: 50vh; /* Full viewport height */
+    position: relative;
+}
+
+/* Adjust header size and spacing */
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Container for social media icons */
+.social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    gap: 20px; /* Space between icons */
+}
+
+/* Style for individual social media icons */
+.social-icon img {
+    width: 40px; /* Size of the icons */
+    height: 40px;
+    vertical-align: middle; /* Align icons with text */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for icons */
+.social-icon img:hover {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Ensure no extra margin at the bottom */
+.contact-section::after {
+    content: '';
+    display: block;
+    height: 20px; /* Space at the bottom if needed */
 }
