@@ -88,4 +88,16 @@ document.addEventListener('DOMContentLoaded', function () {
         showVideoSlide(videoSlideIndex);
         startVideoChangeInterval(); // Start the automatic transition interval
     }
+
+    // Hamburger menu setup
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const menuIcon = document.querySelector('.menu-icon');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuIcon.classList.toggle('open');
+        });
+    }
 });

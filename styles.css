@@ -45,12 +45,53 @@ header {
 /* Navigation Styling */
 nav {
     display: flex;
+    align-items: center;
 }
 
+.menu-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    margin-left: auto;/* Pushes the button to the far right */
+    margin-right: 20px; /* Adjust the spacing from the right edge */
+    position: relative;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #4A235A;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #4A235A;
+    position: absolute;
+    margin-right: 10px;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    top: 8px;
+}
+
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-start; /* Align links to the right */
+    justify-content: flex-end /* Align links to the right */
 }
 
 .nav-links li {
@@ -60,7 +101,7 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: #4A235A; /* Deep spiritual purple */
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -69,7 +110,43 @@ nav {
     color: #F5B041; /* Change color on hover */
 }
 
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;/* Adjust top position based on header height */
+        right: 20px;/* Adjust distance from the right edge */
+        background-color: #F5B041; /* Soft gold */
+        width: 100px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        align-items: center;
+    }
 
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger menu on small screens */
+    }
+
+    .menu-icon.open {
+        background-color: transparent;
+    }
+
+    .menu-icon.open::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .menu-icon.open::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+}
 
 
 
