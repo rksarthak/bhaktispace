@@ -1,9 +1,0 @@
-/* Animations for Section Appearance */
-section {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-section.visible {
-    opacity: 1;
-}
