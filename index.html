@@ -3,118 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhakti Space</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <title>Spiritual Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <div class="logo">Bhakti Space</div>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <nav id="side-menu" class="side-menu">
-            <a href="#register">Register</a>
-            <a href="#contact">Contact</a>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo">
+            <span>Bhakti Space</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#join-us">Join Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: url('images/hero-bg.png');">
-        <div class="content">
+    <section class="welcome-section">
+        <div class="welcome-message">
             <h1>Welcome to Bhakti Space</h1>
-            <h2>Explore the teachings of Bhagwat Gita and other spiritual topics.</h2>
-           <p> Dear friends, welcome to Bhakti Space with Nilambara Das - a transformative event where you can dive deep into the essence of Bhakti yoga! </p>
-
-           <p>Whether you are new to the path of bhakti yoga or a seasoned practitioner, this event offers something for everyone. Come and immerse yourself in the blissful energy of Bhakti Immersion!
-            Bhakti sessions with Nilambar Das include: Philosophical discussion on Bhagavad-gita and Srimad Bhagavatam, mantra meditation, delicious vegan friendly dinner, and expert guidance in a nice ambience.
-           </p>
+            <p>Embark on a spiritual journey</p>
         </div>
     </section>
 
-
-    <!-- Photo Collage -->
-    <section class="photo-collage" style="background-image: url('images/photo-bg.jpg');">
-        <div class="photos">
-            <img src="images/photo1.png" alt="Photo 1">
-            <img src="images/photo2.png" alt="Photo 2">
-            <img src="images/phtoto3.png" alt="Photo 3">
-            <img src="images/photo4.png" alt="Photo 4">
-        </div>
-    </section>
-
-    <!-- Speaker Introduction -->
-<!-- Speaker Introduction -->
-<section class="speaker" id="speaker" style="background-image: url('images/speaker-bg.jpg');">
-    <div class="speaker-content">
-        <!--  <img src="images/speaker-photo.png" alt="Speaker Photo" class="speaker-photo">  -->
-        <div class="speaker-details">
-            <h2>About Nilambara Das</h2>
-            <p>
-Nilambara Das, also known as Dr. Nagaraj Hegde, is a Bhakti Yoga practitioner and teacher from a traditional South Indian Brahmin family. His spiritual quest began in his teens with the teachings of Srila Prabhupada and ISKCON, leading him to Bhakti Yoga. 
-In 2012, he was initiated into Gaudiya Vaishnavism by HH Radhanath Maharaj.
-            </p>
-            <p>
-                Nilambara Das holds a Ph.D. in Computer Engineering from the University of Alabama, where he founded the UA Vedic Society with his wife. His contributions to research, community service, and leadership earned him the title of Graduate Student of the Year in Alabama. 
-                Since 2018, they have been dedicated to building spiritual communities in the Netherlands, inspired by the teachings of the Bhagavad-gita and Srimad Bhagavatam.
-            </p>
-            <p>
-                In addition to leading ISKCON Amsterdam and serving on the Dutch National Council, Nilambara Das is involved in several start-up ventures. 
-                He has also invented an AI-assisted meditation device that tracks breathing and heart activity. 
-                For him, life is about embracing a wholesome spiritual experience and sharing that joy with others.
-            </p>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Video Clips -->
-<!-- Video Clips Section -->
-<section class="video-clips" id="videos" >
-    <h2>Video Clips</h2>
-    <div class="video-carousel">
-        <button class="carousel-button prev-button" onclick="prevSlide()">&#10094;</button>
-        <div class="video-wrapper">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/watch?v=thyBrUBsBOI" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/watch?v=ojYqRIZz5mg" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/watch?v=b1S2_LvYSsQ" allowfullscreen></iframe>
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-slide active-slide">
+                <img src="images/photo1.png" alt="Image 1">
             </div>
+            <div class="carousel-slide">
+                <img src="images/photo2.png" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/phtoto3.png" alt="Image 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/photo4.png" alt="Image 4">
+            </div>
+            <div class="carousel-slide">
+                <img src="images/group_photo_1.jpg" alt="Image 5">
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
         </div>
-        <button class="carousel-button next-button" onclick="nextSlide()">&#10095;</button>
-    </div>
-</section>
+        <div class="dots-container">
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
 
-
-
-<!-- Register Section -->
-<section class="register" id="register" style="background-image: url('images/register-bg.png');">
-    <div class="register-content">
-        <h2>Register Now</h2>
-        <p>Join us for an enlightening journey into Bhakti Yoga with Nilambara Das. Secure your spot for an immersive experience filled with spiritual growth, philosophical discussions, and community engagement.</p>
-        <p><strong>Event Details:</strong></p>
-        <ul>
-            <li><b>Date:</b> 09/09/2024 </li>
-            <li><b>Time:</b> 19:00 - 21:00</li>
-            <li><b>Location:</b> Amsterdam</li>
-        </ul>
-        <a href="https://www.eventbrite.nl/e/tickets-bhakti-space-with-nilambara-das-962837792757?aff=oddtdtcreator" target="_blank" class="register-button">Reserve Your Spot</a>
-    </div>
-</section>
-
-
-<!-- Contact Information -->
-<section class="contact" id="contact" style="background-image: url('images/contact-bg.png');">
-    <div class="contact-content">
-        <h2>Contact Us</h2>
-        <p>We'd love to hear from you! Whether you have questions about the event or need more details, feel free to reach out to us.</p>
-        <p>For more information, please contact us at:</p>
-        <a href="tel:+3168820037" class="contact-number">+3168820037</a>
-        <p>Or reach us via WhatsApp:</p>
-        <a href="https://wa.me/+3168820037" target="_blank" class="contact-whatsapp">Send a WhatsApp Message</a>
-    </div>
-</section>
-
-
-    <script src="js/scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
