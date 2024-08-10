@@ -50,11 +50,11 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: flex-start; /* Align links to the right */
 }
 
 .nav-links li {
-    margin-left: 20px; /* Space between links */
+    margin-left: 5px; /* Space between links */
 }
 
 .nav-links a {
