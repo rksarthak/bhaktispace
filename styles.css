@@ -453,11 +453,13 @@ html {
 
 /* Position navigation arrows correctly */
 .workshops-section .next {
-    right: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */;
+    top: 150px;
 }
 
 .workshops-section .prev {
     left: 10px; /* Adjust as needed */
+    top: 150px;
 }
 
 /* Dots Container */
