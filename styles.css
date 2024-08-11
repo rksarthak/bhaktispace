@@ -166,7 +166,7 @@ nav {
 .welcome-section {
     position: relative;
     height: 100vh; /* Full viewport height */
-    background-image: url('images/hero-bg.png'); /* Path to your background image */
+    background-image: url('images/main_bg.jpg'); /* Path to your background image */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent tiling */
