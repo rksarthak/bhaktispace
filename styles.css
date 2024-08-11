@@ -44,7 +44,7 @@ header {
 
 /* Navigation Styling */
 nav {
-    display: flex;
+    display: flex ;
     align-items: center;
 }
 
@@ -90,12 +90,22 @@ nav {
 /* Navigation Links */
 .nav-links {
     list-style: none;
-    display: flex;
+    display: none;
     justify-content: flex-end /* Align links to the right */
 }
 
+.nav-links {
+    display: none;
+    /* Additional styles */
+}
+
+/* Show menu when active class is added */
+.nav-links.active {
+    display: flex; /* Or whatever display property suits your layout */
+}
+
 .nav-links li {
-    margin-left: 10px; /* Space between links */
+    margin-left: 15px; /* Space between links */
 }
 
 .nav-links a {
@@ -116,17 +126,17 @@ nav {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;/* Adjust top position based on header height */
-        right: 20px;/* Adjust distance from the right edge */
+        top: 100px;/* Adjust top position based on header height */
+        right: 25px;/* Adjust distance from the right edge */
         background-color: #F5B041; /* Soft gold */
-        width: 100px;
+        width: 150px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         padding: 10px;
         align-items: center;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Show the menu */
     }
 
     .menu-toggle {
@@ -147,6 +157,7 @@ nav {
         top: 0;
     }
 }
+
 
 
 
@@ -496,23 +507,6 @@ header {
     color: #4A235A; /* Deep spiritual purple */
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #4A235A;
-    font-size: 14px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #F5B041; /* Change color on hover */
-}
 
 /* Main section with background image */
 .support-us {
@@ -524,10 +518,18 @@ header {
     text-align: center;
 }
 
+/* Add a semi-transparent white background to the content */
+.support-us section {
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block; /* Keeps the background only around the content */
+}
+
 .support-us h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #FFFFFF; /* White for contrast on dark backgrounds */
+    color: #4A235A; /* Text color */ /* White for contrast on dark backgrounds */
 
 }
 
@@ -535,7 +537,7 @@ header {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #E0E0E0; /* Light gray for softer contrast */
+    color: #4A235A; /* Text color */ /* Light gray for softer contrast */
 }
 
 .donate-button {

@@ -32,7 +32,24 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(nextImageSlide, 5000); // Auto transition every 5 seconds
     showImageSlide(imageSlideIndex);
 
-    // Video carousel setup for Workshops Page
+    // Hamburger menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+        menuToggle.querySelector('.menu-icon').classList.toggle('open');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!menuToggle.contains(event.target) && !navLinks.contains(event.target)) {
+            navLinks.classList.remove('active');
+            menuToggle.querySelector('.menu-icon').classList.remove('open');
+        }
+    });
+
+    // Video carousel setup for Workshops Page (existing functionality)
     const workshopCarousel = document.querySelector('.workshops-section .carousel-container');
     if (workshopCarousel) {
         let videoSlideIndex = 0;
@@ -86,30 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         showVideoSlide(videoSlideIndex);
-        startVideoChangeInterval(); // Start the automatic transition interval
-    }
-
-    // Hamburger menu setup
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const menuIcon = document.querySelector('.menu-icon');
-
-    if (menuToggle && navLinks) {
-        // Toggle the menu on button click
-        menuToggle.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent click from bubbling up to the document
-            navLinks.classList.toggle('active');
-            menuIcon.classList.toggle('open');
-        });
-
-        // Close the menu if clicked outside
-        document.addEventListener('click', (event) => {
-            if (!menuToggle.contains(event.target) && !navLinks.contains(event.target)) {
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    menuIcon.classList.remove('open');
-                }
-            }
-        });
+        startVideoChangeInterval();
     }
 });
