@@ -31,9 +31,9 @@ header {
 }
 
 .logo img {
-    height: 100px;
+    height: 150px;
     width: auto;  /* Maintain aspect ratio */
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .logo span {
