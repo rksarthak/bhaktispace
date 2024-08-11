@@ -471,3 +471,89 @@ html {
     background-color: #717171;
 }
 
+/* General styling for the Support Us page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #F5B041; /* Soft gold */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4A235A; /* Deep spiritual purple */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4A235A;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #F5B041; /* Change color on hover */
+}
+
+/* Main section with background image */
+.support-us {
+    background-image: url('images/donation_bg.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.support-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #FFFFFF; /* White for contrast on dark backgrounds */
+
+}
+
+.support-us p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #E0E0E0; /* Light gray for softer contrast */
+}
+
+.donate-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #F5B041; /* Soft gold */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #f39c12; /* Slightly darker gold on hover */
+}
+
+footer {
+    /* Footer styling */
+}

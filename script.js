@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function startVideoChangeInterval() {
-            videoChangeInterval = setInterval(nextVideoSlide, 5000);
+            videoChangeInterval = setInterval(nextVideoSlide, 3000); // Auto transition every 3 seconds
         }
 
         function stopVideoChangeInterval() {
