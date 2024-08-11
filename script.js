@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Video carousel setup for Workshops Page (existing functionality)
+    // Video carousel setup for Workshops Page
     const workshopCarousel = document.querySelector('.workshops-section .carousel-container');
     if (workshopCarousel) {
         let videoSlideIndex = 0;
@@ -85,7 +85,25 @@ document.addEventListener('DOMContentLoaded', function () {
             clearInterval(videoChangeInterval);
         }
 
+        // Thumbnail click handling
         videoSlides.forEach((slide) => {
+            const thumbnail = slide.querySelector('.video-thumbnail');
+            if (thumbnail) {
+                thumbnail.addEventListener('click', function () {
+                    const videoId = this.getAttribute('data-video-id');
+                    const iframe = document.createElement('iframe');
+                    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0&controls=1`;
+                    iframe.frameBorder = '0';
+                    iframe.allowFullscreen = true;
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    
+                    // Replace the thumbnail with the iframe
+                    slide.innerHTML = '';
+                    slide.appendChild(iframe);
+                });
+            }
+
             slide.addEventListener('mouseenter', function () {
                 stopVideoChangeInterval();
                 slide.classList.add('hover-effect');
