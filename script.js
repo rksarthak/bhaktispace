@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.carousel-section .prev').addEventListener('click', previousImageSlide);
     }
 
-    setInterval(nextImageSlide, 5000); // Auto transition every 5 seconds
+    setInterval(nextImageSlide, 2000); // Auto transition every 5 seconds
     showImageSlide(imageSlideIndex);
 
     // Hamburger menu toggle
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function startVideoChangeInterval() {
-            videoChangeInterval = setInterval(nextVideoSlide, 3000); // Auto transition every 3 seconds
+            videoChangeInterval = setInterval(nextVideoSlide, 2000); // Auto transition every 3 seconds
         }
 
         function stopVideoChangeInterval() {
