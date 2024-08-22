@@ -91,36 +91,21 @@ document.addEventListener('DOMContentLoaded', function () {
             if (thumbnail) {
                 thumbnail.addEventListener('click', function () {
                     const videoId = this.getAttribute('data-video-id');
-                    const iframe = document.createElement('iframe');
-                    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0&controls=1`;
-                    iframe.frameBorder = '0';
-                    iframe.allowFullscreen = true;
-                    iframe.style.width = '100%';
-                    iframe.style.height = '100%';
-                    
-                    // Replace the thumbnail with the iframe
-                    slide.innerHTML = '';
-                    slide.appendChild(iframe);
+                    const iframe = slide.querySelector('iframe');
+                    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`; // Start video muted and autoplay
                 });
             }
-
-            slide.addEventListener('mouseenter', function () {
-                stopVideoChangeInterval();
-                slide.classList.add('hover-effect');
-            });
-
-            slide.addEventListener('mouseleave', function () {
-                startVideoChangeInterval();
-                slide.classList.remove('hover-effect');
-            });
         });
 
-        if (document.querySelector('.workshops-section .next') && document.querySelector('.workshops-section .prev')) {
-            document.querySelector('.workshops-section .next').addEventListener('click', nextVideoSlide);
-            document.querySelector('.workshops-section .prev').addEventListener('click', previousVideoSlide);
-        }
+        document.querySelector('.workshops-section .next').addEventListener('click', nextVideoSlide);
+        document.querySelector('.workshops-section .prev').addEventListener('click', previousVideoSlide);
 
-        showVideoSlide(videoSlideIndex);
-        startVideoChangeInterval();
+        startVideoChangeInterval(); // Start automatic video slide change
+
+        // Pause video auto-slide when hovering over the carousel
+        workshopCarousel.addEventListener('mouseover', stopVideoChangeInterval);
+        workshopCarousel.addEventListener('mouseout', startVideoChangeInterval);
     }
-});
+
+    });
+
